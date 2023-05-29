@@ -1,0 +1,605 @@
+/*import af font*/
+@font-face {
+	font-family: 'BwModelicaSS02';
+	src: url('../fonts/BwModelicaSS02-Medium.otf') format('opentype');
+	src: url('../fonts/BwModelicaSS02-regular.otf') format('opentype');
+	font-weight: 300; /* Light */
+	font-style:normal;
+  }
+  @font-face {
+	font-family: 'BwModelicaSS02 medium';
+	src: url('../fonts/BwModelicaSS02-Medium.otf') format('opentype');
+	font-weight: 300; /* Medium */
+	font-style: bold;
+  }
+
+body {
+	font-family: 'BwModelicaSS02', sans-serif;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color:#36325b;
+}
+h1{
+font-size: 50px;
+font-family: 'BwModelicaSS02 medium', sans-serif;
+text-align: center;
+margin-bottom: 10px;
+margin:0%;
+} 
+h2{
+	font-size: 50px;
+	font-family: 'BwModelicaSS02 medium', sans-serif;
+	margin-bottom: 20px;
+	padding: 10px;
+	text-align: center;
+	margin-top: 0%;
+}
+
+header {
+	background-image: url(../img/headerindex.png);
+	padding: 20px;
+	position: relative;
+	background-size: 1600px;
+  }
+  .logo-container img {
+	max-height: 90px;
+	display: flex;
+  }
+  
+  nav {
+	margin: 0 auto;
+	font-size:40px;
+	max-width: 1000px;
+	padding-left: 60px;
+	padding-right: 80px;
+	margin-bottom: 8%;
+	font-family: 'BwModelicaSS02',sans-serif;
+  }
+  
+  nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+  }
+  .nav-menu{
+	display: flex;
+	align-items: center;
+  }
+/*tilføjer afstand mellem nav elementer*/
+  nav li {
+	margin: 0 20px;
+  }
+
+  nav a {
+	color: #36325b;
+	text-decoration: none;
+  }
+  li {
+	text-decoration: none;
+  }
+nav li:hover {
+	background-color: #f0bdbe;
+}
+
+    /* CSS for the dropdown menu */
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	  }
+	  
+	  .dropdown-content {
+		display: none;
+		font-size: 24px;
+		position:absolute;
+		background-color: #f0bdbe;
+		z-index: 1;
+	  }
+	  
+	  .dropdown:hover .dropdown-content {
+		display: block;
+	  }
+	  a {
+		color: inherit; 
+		text-decoration: none;
+	  }
+	  a:hover{
+		text-decoration: underline;
+	  }
+
+/*responsivt design af menuen*/
+.hamburger {
+	display: none;
+	cursor: pointer;
+  }
+  
+  .bar {
+	display: block;
+	width: 30px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	background-color: #36325b;
+  }
+  
+  @media (max-width: 724px) {
+	.hamburger {
+	  display: block;
+
+	}
+  
+	.hamburger.active .bar:nth-child(2) {
+	  opacity: 0;
+	}
+  
+	.hamburger.active .bar:nth-child(1) {
+	  transform: translateY(8px) rotate(45deg);
+	}
+  
+	.hamburger.active .bar:nth-child(3) {
+	  transform: translateY(-8px) rotate(-45deg);
+	}
+  
+	.navbar .nav-menu {
+	  position: fixed;
+	  left: -100%;
+	  top: 70px;
+	  gap: 0;
+	  flex-direction: column;
+	  font-size: 1.2rem;
+	  background-color:#ffffff8a;
+	  width: 100%;
+	  text-align: center;
+	  transition: 0.3s;
+	}
+  .dropdown-content{
+	font-size: 1.2rem;		
+		background-color: none;
+		z-index: 1;
+  }
+	.navbar .nav-item {
+	  margin: 16px 0;
+	}
+  
+	.navbar .nav-menu.active {
+	  left: 0;
+	}
+
+
+  }
+  
+
+/*styling af intro på forside*/
+/*style af YT video*/
+.intro {
+    display: flex;
+	margin: 0%;
+	height: auto;
+}
+/*gennemsigtig baggrund i velkomst*/
+.welcome {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 30px;
+	margin-bottom: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.welcome p {
+    margin-bottom: 20px;
+}
+/*styling af video på underside*/
+.video {
+	flex: 1;
+    justify-content:flex-end;
+	height: 100%;
+	width: 100%;
+	border-radius: 30px;	
+}
+.video-wrapper {
+	position: relative;
+	width: 50%;
+	height: 344px;
+}
+/* styling af main*/
+main {
+	background-image: url(../img/bobbles.png);
+	max-width: 100%;
+
+}
+section img{
+	max-width: 250px;
+	display: flex;
+}
+.video {
+	flex: 1;
+    justify-content:flex-end;
+	height: 100%;
+	width: 100%;
+	border-radius: 30px;	
+}
+.video-wrapper {
+	position: relative;
+	width: 50%;
+	height: 344px;
+}
+/* styling af services boxe*/
+.box {
+	display: inline-block;
+	width: calc(20% - 20px);
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: rgb(210, 235, 255, 0.5);
+	border-radius: 30px;
+  }
+  
+  .box img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  .box h3 {
+	margin-top: 10px;
+	font-size: 1.2rem;
+	font-weight: bold;
+  }
+  
+  /*Service boxe bliver responsive*/
+  @media screen and (max-width: 768px) {
+	.box {
+	  width: calc(50% - 20px);
+	  margin-right: 0;
+	}
+  }
+  
+  /*styling af kontakt formular*/
+  form {
+	max-width: 500px;
+	margin: auto;
+	padding-top: 10%;
+  }
+  input,
+  textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 2px solid #f0bdbe;
+	border-radius: 30px;
+  }
+  button {
+	background-color: #f0bdbe;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 30px;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	background-color: #ffabac;
+  }
+  
+  /* Responsivt layout af kontakt formular*/
+  @media (max-width: 768px) {
+	form {
+	  max-width: 300px;
+	}
+  }
+
+/*style for flexvirk video*/
+video{
+	border-radius: 30px;
+	margin-top: 50px;
+}
+
+  /* Responsivt layout af flexvirk video*/
+  @media (max-width: 768px) {
+	video {
+	  max-width: 300px;
+	}
+  }
+  @media (min-width: 350px) {
+	video {
+	  max-width: 85%;
+	}
+  }
+
+ /* CSS for the article section */
+ article {
+    margin: 0px;
+    padding: 100px;
+    border-radius: 5px;
+  }
+  .succes img{
+	max-width: 500px;
+	margin:2%;
+  }
+  .historie{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding:50px;
+  }
+  .historie h3{
+	font-size: 50px;
+  }
+  .historie p{
+	max-width:800px;
+  }
+  /* Responsivt layout af artikler på boxe*/
+@media (max-width: 768px) {
+	article {
+		padding: 0px;
+		border-radius: 5px;
+		justify-content: space-evenly;
+	  }
+	.historie h3{
+font-size: 30px;
+}
+.historie{
+	padding: 0%;
+	margin:1%;
+
+}
+.succes img{
+	max-width: 300px;
+	margin:0%;
+  }
+}
+
+/*styling af aside*/
+aside{
+
+	margin-top: 5%;
+	padding: 5%;
+	margin-left: 50px;
+	margin-right: 50px;
+	background-color: hsl(0, 100%, 92%);
+	border-radius: 100px;
+}
+/* Responsivt layout aside boxe*/
+@media (max-width: 768px) {
+	.aside{
+	margin-left: 25%;
+	margin-right: 25%;
+}
+}
+
+
+/*styling af anmeldelser*/
+.anmeldelse-box {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row;
+    justify-content: space-evenly;
+	
+  }
+
+  .anmeldelse {
+	padding: 10px;
+	border-radius: 30px;
+	
+	width:300px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	background-color: #ffdbdc;
+
+  }
+  .anmeldelse:hover {
+	transform: scale(1.10);
+  }
+  .anmeldelse p {
+	font-size: 20px;
+	line-height: 1.2;
+  }
+/* koncept tekst der slider ind*/
+.salgs-tekst {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	margin-top: 0%;
+	font-family: 'BwModelicaSS02 Medium', sans-serif;
+  }
+
+  .slide-tekst {
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+	animation: slide-in 1s ease-out forwards;
+  }
+  
+  @keyframes slide-in {
+	0% {
+	  transform: translateY(100%);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  .slide-tekst li {
+	color: #36325b;
+	font-size: 30px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+	margin: 0 10px; /* Tilføjer et mellemrum på 10px mellem li-elementerne */
+  }
+  
+  /*styling af Selvstændig med ansat del af koncept siden*/ 
+  #salesText {
+	opacity: 0;
+	position: relative;
+	left: -100px;
+	transition: opacity 1s, left 1s;
+  }
+  .slide-in {
+	opacity: 1;
+	left: 0;
+  }
+/* koncept billedgalleri*/
+#image-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .image-container {
+	position: relative;
+	margin: 10px;
+  }
+  
+  .image-container img {
+	max-width: 100%;
+	height: 500px;
+	object-fit: cover;
+	cursor: pointer;
+  }
+  
+  .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+  }
+  
+  .overlay-text {
+	text-align: center;
+	color: #fff;
+	padding: 20px;
+  }
+  
+  .image-container:hover .overlay {
+	opacity: 1;
+  }
+  
+  .overlay-text h3 {
+	margin: 0;
+	font-size: 40px;
+	font-family: 'BwModelicaSS02 medium';
+  }
+  
+  .overlay-text p {
+	margin: 10%;
+	font-size: 24px;
+  }
+  
+/* Style for h1 der sender folk videre til Om Os fra Ydelser */
+#videre{
+	margin-bottom: 0%;
+	padding: 100px;
+	text-decoration: none;
+	font-size: 40px;
+}
+
+/* Style for footer */
+.footer {
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #36325b;
+  }
+.social-links {
+	list-style: none;
+	margin: 0;
+	padding: 5px;
+	display: flex;
+	justify-content: center; /* horisontale ikoner  */
+	align-items: center; 
+  }
+  
+  .social-links li {
+	margin-right: 20px; /* laver mellemrum mellem ikoner */
+  }
+  
+  .social-links li:last-child {
+	margin-right: 0; /* fjerner højre margin fra ikon */
+  }
+  
+  .social-links img {
+	width: 30px; /* bestemmer størrelsen på ikonerne */
+	height: 30px; 
+  }
+  .col-md-12{
+	color: #fff;
+  }
+  
+  .addresse {
+	margin-top: 20px;
+	font-size: 16px;
+	color: #ffffff;
+	text-align: center;
+	justify-content: center; /* horisontale ikoner  */
+	align-items: center; 
+  }
+
+    /* CSS for responsive layout */
+	@media (min-width: 800px) {
+		.success-section {
+		  display: flex;
+		  align-items: center;
+		  gap: 20px;
+		}
+		.success-section:nth-child(even) {
+		  flex-direction: row-reverse;
+		}
+		.success-section:nth-child(even) .success-image {
+		  margin-left: auto;
+		}
+		.historie{
+			padding:0px;
+			margin: 0%;
+		}
+
+		h2, h3{
+			font-size: 40px;
+		}
+		.anmeldelse-active{
+			margin-left: 5%;
+			margin-right: 5%;
+			padding:2%
+		}
+	  }
+
+	  @media (max-width: 450px){
+		h1{
+			font-size: 30px;
+		}
+		h2{
+			font-size: 2rem;
+		}
+		 h3{
+			font-size: 24px;
+		}
+		.anmeldelse-active{
+			margin-left: 0%;
+			margin-right: 0%;
+			padding:2%
+		}
+		.anmeldelse-box{
+			margin:0%
+		}
+
+	  }
+  
